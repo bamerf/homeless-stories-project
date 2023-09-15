@@ -1,8 +1,11 @@
-import Image from 'next/image';
+import Link from 'next/link';
 
 import { Nav } from '@/app/components/Nav';
 import { Header } from '@/app/components/Header';
 import { Content } from '@/app/components/Content';
+import { YoutubeIcon } from '@/app/components/icons/Youtube';
+import { FacebookIcon } from '@/app/components/icons/Facebook';
+import { InstagramIcon } from '@/app/components/icons/Instagram';
 
 export default function Home() {
   return (
@@ -31,7 +34,9 @@ export default function Home() {
             to get medical help when they are sick or injured.
           </p>
 
-          <p>And every one of them has a story.</p>
+          <p className="text-3xl font-bold">
+            And every one of them has a story.
+          </p>
 
           <p>
             My goal in starting this blog is to give as many as would like to a
@@ -97,18 +102,36 @@ export default function Home() {
         </div>
         <hr className="mt-12 mb-6" />
         <div className="flex justify-end gap-3">
-          <button className="py-[10px] px-4 border rounded-lg flex items-center">
+          {/* <button className="py-[10px] px-4 border rounded-lg flex items-center">
             <span className="mr-2">
               <div className="w-5 h-5 bg-gray-300" />
             </span>
             Copy link
-          </button>
-          <button className="p-[10px] border rounded-lg">
-            <div className="w-5 h-5 bg-gray-300" />
-          </button>
-          <button className="p-[10px] border rounded-lg">
-            <div className="w-5 h-5 bg-gray-300" />
-          </button>
+          </button> */}
+          <Link
+            href="https://www.instagram.com/homeless_stories_project/"
+            referrerPolicy="no-referrer"
+            target="_blank"
+            className="p-[10px] border rounded-lg"
+          >
+            <InstagramIcon />
+          </Link>
+          <Link
+            href="https://www.facebook.com/HomelessStoriesProject215?mibextid=LQQJ4d"
+            referrerPolicy="no-referrer"
+            target="_blank"
+            className="p-[10px] border rounded-lg"
+          >
+            <FacebookIcon />
+          </Link>
+          <Link
+            href="https://youtube.com/@HomelessStoriesProject"
+            referrerPolicy="no-referrer"
+            target="_blank"
+            className="p-[10px] border rounded-lg"
+          >
+            <YoutubeIcon />
+          </Link>
         </div>
       </Content>
     </main>
