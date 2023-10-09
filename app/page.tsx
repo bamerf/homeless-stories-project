@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 import { Nav } from '@/app/components/Nav';
 import { Header } from '@/app/components/Header';
@@ -7,22 +8,18 @@ import { YoutubeIcon } from '@/app/components/icons/Youtube';
 import { FacebookIcon } from '@/app/components/icons/Facebook';
 import { InstagramIcon } from '@/app/components/icons/Instagram';
 
+import image from '@/images/man-and-sun.png';
+
 export default function Home() {
   return (
     <main className="flex flex-col items-center justify-between">
       <Nav />
       <Header />
-      <div className="w-[960px] h-[400px] bg-slate-400 mt-16 mb-24" />
+      <div className="w-[960px] h-[500px] flex justify-center items-center overflow-hidden mt-16 mb-16">
+        <Image alt="man under sun" src={image} width={960} height={500} />
+      </div>
       <Content className="mb-24">
         <div className="flex flex-col gap-8 text-gray-500">
-          <p>
-            Creating awareness and empathy for the challenges of living in
-            homelessness through stories told by the people experiencing it, and
-            those dedicated to helping them.
-          </p>
-
-          <hr />
-
           <p>
             There are over half a million (nearly 600k and growing) people in
             this self proclaimed greatest country on earth, who are unable for
@@ -34,7 +31,7 @@ export default function Home() {
             to get medical help when they are sick or injured.
           </p>
 
-          <p className="text-3xl font-bold">
+          <p className="text-3xl font-bold text-neutral-900">
             And every one of them has a story.
           </p>
 

@@ -5,7 +5,7 @@ import { Content } from '@/app/components/Content';
 export const Header: FC = () => (
   <Content className="flex flex-col items-center gap-10 mt-24">
     <div className="flex flex-col items-center justify-center gap-6 text-center">
-      <h1 className="text-5xl font-semibold text-gray-900">
+      <h1 className="text-5xl font-semibold text-neutral-900">
         Homeless Stories Project
       </h1>
       <p className="text-xl font-light text-center text-gray-500">
